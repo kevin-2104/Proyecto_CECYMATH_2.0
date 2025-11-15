@@ -3,20 +3,45 @@
 <head>
     <meta lang="es", charset="UTF-8">
     <title>Proyecto CECYMATH 2.0</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
 </head>
 <body>
     <h1>Bienvenido Al Proyecto CECYMATH 2.0</h1>
-    <ul>
-        <li><a href="{% url 'suma' %}">Suma</li>
-        <li><a href="{% url 'resta' %}">Resta</li>
-        <li><a href="{% url 'multiplicacion' %}">Multiplicacion</li>
-        <li><a href="{% url 'divicion' %}">Division</li>
-        <li><a href="{% url 'jerarquia' %}">Jerarquia de operaciones</li>
-        <li><a href="{% url 'recta' %}">Recta numerica</li>
-        <li><a href="{% url 'polinomios' %}">Operaciones con polinomios</li>
-        <li><a href="{% url 'ec_primer' %}">Ecuaciones de primer grado</li>
-        <li><a href="{% url 'ec_segundo' %}">Ecuaciones de segundo grado</li>
-        <li><a href="{% url 'factorizacion' %}">Factorizacion</li>
-        <li><a href="{% url 'figuras' %}">Calculo de area y perimetros de figuras planas</li>
-    </ul>     
+    <h2>Elige una seccion que te va a dirigir a la explicacion ejemplos etc. de la operacion</h2>
+    <div class="contenido_menu">
+        <a href="{% url 'suma' %}"><div class="tarjeta">
+            Suma
+        </div>
+        <a href="{% url 'resta' %}"><div class="tarjeta">
+            Resta
+        </div>
+        <a href="{% url 'multiplicacion' %}"><div class="tarjeta">
+            Multiplicacion
+        </div>
+        <a href="{% url 'divicion' %}"><div class="tarjeta">
+            Division
+        </div>
+        <a href="{% url 'jerarquia' %}"><div class="tarjeta">
+            Jerarquia de operaciones
+        </div>
+        <a href="{% url 'recta' %}"><div class="tarjeta">
+            Recta numerica
+        </div>
+        <a href="{% url 'polinomios' %}"><div class="tarjeta">
+            Operaciones con polinomios
+        </div>
+        <a href="{% url 'ec_primer' %}"><div class="tarjeta">
+            Ecuaciones de primer grado
+        </div>
+        <a href="{% url 'ec_segundo' %}"><div class="tarjeta">
+            Ecuaciones de segundo grado
+        </div>
+        <a href="{% url 'factorizacion' %}"><div class="tarjeta">
+            Factorizacion
+        </div>
+        <a href="{% url 'figuras' %}"><div class="tarjeta">
+            Calculo de area y perimetros de figuras planas
+        </div>
+    </div>     
 </body>   
