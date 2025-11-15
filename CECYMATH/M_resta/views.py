@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def resta(request):
+    return render(request, "M_resta/resta.html")

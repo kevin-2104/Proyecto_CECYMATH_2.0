@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def suma (request):
+    return render(request, "M_suma/suma.html")

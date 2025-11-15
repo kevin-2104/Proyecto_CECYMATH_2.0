@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def multiplicacion(request):
+    return render(request, "M_multiplicacion/multiplicacion.html")

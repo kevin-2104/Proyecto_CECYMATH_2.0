@@ -16,8 +16,20 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', include('core.urls')),
+    path('M_ar_y_p_fig_planas/', include('M_ar_y_p_fig_planas.urls')),
+    path('M_divicion/', include('M_divicion.urls')),
+    path('M_ec_primer_grado/', include('M_ec_primer_grado.urls')),
+    path('M_ec_segundo_grado/', include('M_ec_segundo_grado.urls')),
+    path('M_factorizacion/', include('M_factorizacion.urls')),
+    path('M_jer_operaciones/', include('M_jer_operaciones.urls')),
+    path('M_multiplicacion/', include('M_multiplicacion.urls')),
+    path('M_op_polinomios/', include('M_op_polinomios.urls')),
+    path('M_recta_numérica/', include('M_recta_numérica.urls')),
+    path('M_resta/', include('M_resta.urls')),
+    path('M_suma/', include('M_suma.urls')),
 ]

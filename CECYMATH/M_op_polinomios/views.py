@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def polinomios(request):
+    return render(request, "M_op_polinomios/polinomios.html")

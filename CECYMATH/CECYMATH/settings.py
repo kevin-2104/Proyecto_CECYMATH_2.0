@@ -37,6 +37,18 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "core", 
+    "M_ar_y_p_fig_planas",
+    "M_divicion",
+    "M_ec_primer_grado",
+    "M_ec_segundo_grado",
+    "M_factorizacion",
+    "M_jer_operaciones",
+    "M_multiplicacion",
+    "M_op_polinomios",
+    "M_recta_numérica",
+    "M_resta",
+    "M_suma",
 ]
 
 MIDDLEWARE = [
@@ -114,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

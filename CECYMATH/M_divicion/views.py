@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def divicion(request):
+    return render(request, "M_divicion/divicion.html")
