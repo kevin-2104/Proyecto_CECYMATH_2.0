@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from .views import sume
 
 urlpatterns = [
-    path("", views.suma, name="suma")
+    path('suma/', sume, name='suma'),
 ]

@@ -141,6 +141,23 @@ Segundo video sobre la Jerarquia de operaciones
 
 <br>
 <a href="#top">Volver al inicio</a>
+<h1>Formulario Para practicar lo aprendido</h1>
+<h2>Jerarquía de operaciones</h2>
 
+<form method="post">
+    {% csrf_token %}
+
+    <input type="text" name="expresion" placeholder="Ej: 2+3*4" value="{{ expresion }}" required>
+
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado: {{ resultado }}</h3>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
 </body>
 </html>

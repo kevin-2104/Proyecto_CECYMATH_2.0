@@ -124,6 +124,19 @@ Tercer video sobre la suma
         </a>
     </li>
 </ul>
+<h1>Formulario Para practicar lo aprendido</h1>
+<form method="post">
+    {% csrf_token %}
+
+    <input type="number" name="a" placeholder="Número 1" required>
+    <input type="number" name="b" placeholder="Número 2" required>
+
+    <button type="submit">Sumar</button>
+</form>
+
+{% if resultado != None %}
+    <h2>Resultado: {{ resultado }}</h2>
+{% endif %}
 
 <br>
 <a href="#top">Volver al inicio</a>
