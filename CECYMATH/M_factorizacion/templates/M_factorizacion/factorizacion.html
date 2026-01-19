@@ -136,5 +136,43 @@ Segundo video sobre la divicion
         </a>
     </li>
 </ul>
+<h1>Formulario para practicar Factorización</h1>
+<h2>Factor común en expresiones algebraicas</h2>
+<br>
+<form method="post">
+    {% csrf_token %}
+
+    <label>Coeficiente 1:</label><br>
+    <input type="number" step="any" name="a" placeholder="Ej: 6" required>
+    <br><br>
+
+    <label>Variable (solo letra, ej: x):</label><br>
+    <input type="text" name="variable" placeholder="Ej: x" required>
+    <br><br>
+
+    <label>Coeficiente 2:</label><br>
+    <input type="number" step="any" name="b" placeholder="Ej: 9" required>
+    <br><br>
+
+    <label>Tipo de expresión:</label><br>
+    <select name="tipo" required>
+        <option value="simple">ax + b</option>
+        <option value="con_variable">ax² + bx</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Factorizar</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado:</h3>
+    <p>{{ resultado }}</p>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
+<br>
+<a href="#top">Volver al inicio</a>
 </body>
 </html>

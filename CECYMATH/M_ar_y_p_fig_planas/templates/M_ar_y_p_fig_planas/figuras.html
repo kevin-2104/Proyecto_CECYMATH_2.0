@@ -157,6 +157,49 @@ Tercer video sobre las Ecuaciones de segundo grado
 </ul>
 
 <br>
+<h1>Formulario para practicar Áreas y Perímetros</h1>
+<h2>Cálculo de Figuras Planas</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Selecciona la figura:</label><br>
+    <select name="figura" required>
+        <option value="">-- Selecciona --</option>
+        <option value="cuadrado">Cuadrado</option>
+        <option value="rectangulo">Rectángulo</option>
+        <option value="triangulo">Triángulo</option>
+        <option value="circulo">Círculo</option>
+    </select>
+    <br><br>
+
+    <label>Valor 1 (lado / base / radio):</label><br>
+    <input type="number" step="any" name="valor1" required>
+    <br><br>
+
+    <label>Valor 2 (altura, si aplica):</label><br>
+    <input type="number" step="any" name="valor2">
+    <br><br>
+
+    <label>¿Qué deseas calcular?</label><br>
+    <select name="operacion" required>
+        <option value="area">Área</option>
+        <option value="perimetro">Perímetro</option>
+    </select>
+    <br><br>
+
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado: {{ resultado }}</h3>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
+
+<br>
 <a href="#top">Volver al inicio</a>
 
 </body>

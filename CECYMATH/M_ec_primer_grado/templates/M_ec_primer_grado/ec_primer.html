@@ -147,6 +147,35 @@ Tercer video sobre las Ecuaciones de primer grado
         </a>
     </li>
 </ul>
+<br>
+<h1>Formulario para practicar Ecuaciones de Primer Grado</h1>
+<h2>Resolver ecuaciones tipo ax + b = c</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Coeficiente de x (a):</label><br>
+    <input type="number" step="any" name="a" placeholder="Ej: 2" required>
+    <br><br>
+
+    <label>Término independiente (b):</label><br>
+    <input type="number" step="any" name="b" placeholder="Ej: 4" required>
+    <br><br>
+
+    <label>Resultado (c):</label><br>
+    <input type="number" step="any" name="c" placeholder="Ej: 10" required>
+    <br><br>
+
+    <button type="submit">Resolver ecuación</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado: x = {{ resultado }}</h3>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
 
 <br>
 <a href="#top">Volver al inicio</a>
