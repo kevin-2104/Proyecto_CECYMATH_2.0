@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "M_jer_operaciones",
     "M_multiplicacion",
     "M_op_polinomios",
-    "M_recta_numérica",
+    "M_recta_numerica",
     "M_resta",
     "M_suma",
 ]

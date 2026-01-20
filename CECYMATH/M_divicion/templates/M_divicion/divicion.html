@@ -142,6 +142,31 @@ Tercer video sobre la Divicion
         </a>
     </li>
 </ul>
+<br>
+<h1>Formulario para practicar la División</h1>
+<h2>Operación de División</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Dividendo:</label><br>
+    <input type="number" step="any" name="dividendo" placeholder="Ej: 20" required>
+    <br><br>
+
+    <label>Divisor:</label><br>
+    <input type="number" step="any" name="divisor" placeholder="Ej: 4" required>
+    <br><br>
+
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado: {{ resultado }}</h3>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
 
 <h2 id="referencias">Referencias</h2>
 <ul>

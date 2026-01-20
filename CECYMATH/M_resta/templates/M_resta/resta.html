@@ -145,6 +145,7 @@ Tercer video sobre la resta
     </li>
 </ul>
 
+<<<<<<< HEAD
 <h2 id="referencias">Referencias</h2>
 <ul>
     <li>
@@ -155,6 +156,21 @@ Tercer video sobre la resta
     </li>
 </ul>
 
+=======
+<h1>Formulario Para practicar lo aprendido</h1>
+<form method="post">
+    {% csrf_token %}
+
+    <input type="number" name="a" placeholder="Número 1" required>
+    <input type="number" name="b" placeholder="Número 2" required>
+
+    <button type="submit">Restar</button>
+</form>
+
+{% if resultado != None %}
+    <h2>Resultado: {{ resultado }}</h2>
+{% endif %}
+>>>>>>> adff7e571fe747f85154d9e37f72bf7943500337
 <br>
 <a href="#top">Volver al inicio</a>
 

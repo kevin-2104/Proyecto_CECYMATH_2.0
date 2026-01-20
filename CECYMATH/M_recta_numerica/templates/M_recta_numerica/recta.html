@@ -147,7 +147,11 @@ Tercer video sobre la recta numerica
         </a>
     </li>
 </ul>
+<h1>Formulario Para practicar lo aprendido</h1>
+<form method="post">
+    {% csrf_token %}
 
+<<<<<<< HEAD:CECYMATH/M_recta_numérica/templates/M_recta_numérica/recta.html
 <h2 id="referencias">Referencias</h2>
 <ul>
     <li>
@@ -159,6 +163,28 @@ Tercer video sobre la recta numerica
     </li>
 </ul>
 
+=======
+    <input type="number" name="inicio" placeholder="Punto inicial" required>
+    <input type="number" name="desplazamiento" placeholder="Avance (+) o retroceso (-)" required>
+
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Recta numérica</h3>
+    <p>Punto inicial: {{ inicio }}</p>
+    <p>Desplazamiento: {{ desplazamiento }}</p>
+    <p><strong>Resultado final: {{ resultado }}</strong></p>
+
+    {% if desplazamiento > 0 %}
+        <p>➡️ Avanzamos {{ desplazamiento }} unidades a la derecha</p>
+    {% elif desplazamiento < 0 %}
+        <p>⬅️ Retrocedemos {{ desplazamiento_abs }} unidades a la izquierda</p>
+    {% else %}
+        <p>⏺ No hay desplazamiento</p>
+    {% endif %}
+{% endif %}
+>>>>>>> adff7e571fe747f85154d9e37f72bf7943500337:CECYMATH/M_recta_numerica/templates/M_recta_numerica/recta.html
 <br>
 <a href="#top">Volver al inicio</a>
 

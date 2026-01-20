@@ -157,7 +157,10 @@ Tercer video sobre los polinomios
         </a>
     </li>
 </ul>
+<h1>Formulario para practicar lo aprendido</h1>
+<h2>Operaciones con polinomios</h2>
 
+<<<<<<< HEAD
 <h2 id="referencias">Referencias</h2>
 <ul>
     <li>
@@ -168,6 +171,34 @@ Tercer video sobre los polinomios
     </li>
 </ul>
 
+=======
+<form method="post">
+    {% csrf_token %}
+
+    <input type="number" name="coef1" placeholder="Coeficiente 1" required> x
+    <br><br>
+
+    <select name="operacion" required>
+        <option value="suma">+</option>
+        <option value="resta">−</option>
+    </select>
+    <br><br>
+
+    <input type="number" name="coef2" placeholder="Coeficiente 2" required> x
+    <br><br>
+
+    <button type="submit">Calcular</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado:</h3>
+    <p><strong>{{ resultado }}x</strong></p>
+{% endif %}
+
+{% if error %}
+    <p style="color:red;">{{ error }}</p>
+{% endif %}
+>>>>>>> adff7e571fe747f85154d9e37f72bf7943500337
 <br>
 <a href="#top">Volver al inicio</a>
 

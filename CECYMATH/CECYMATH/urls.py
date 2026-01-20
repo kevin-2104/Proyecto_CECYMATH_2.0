@@ -29,7 +29,7 @@ urlpatterns = [
     path('M_jer_operaciones/', include('M_jer_operaciones.urls')),
     path('M_multiplicacion/', include('M_multiplicacion.urls')),
     path('M_op_polinomios/', include('M_op_polinomios.urls')),
-    path('M_recta_numérica/', include('M_recta_numérica.urls')),
+    path('M_recta_numérica/', include('M_recta_numerica.urls')),
     path('M_resta/', include('M_resta.urls')),
     path('M_suma/', include('M_suma.urls')),
 ]

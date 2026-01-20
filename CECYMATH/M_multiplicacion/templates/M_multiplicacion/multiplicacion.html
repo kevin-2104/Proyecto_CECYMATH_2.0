@@ -154,7 +154,21 @@ Segundo video sobre la multiplicación
         </a>
     </li>
 </ul>
+<h1>Formulario para practicar lo aprendido</h1>
+<h2>Multiplicación</h2>
 
+<form method="post">
+    {% csrf_token %}
+
+    <input type="number" name="a" placeholder="Número 1" required>
+    <input type="number" name="b" placeholder="Número 2" required>
+
+    <button type="submit">Multiplicar</button>
+</form>
+
+{% if resultado != None %}
+    <h3>Resultado: {{ resultado }}</h3>
+{% endif %}
 <br>
 <a href="#top">Volver al inicio</a>
 
